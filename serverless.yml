@@ -1,0 +1,27 @@
+service: 
+  name: cryptolambda 
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  memorySize: 128
+  timeout: 10
+
+  region: eu-west-1
+
+  iamRoleStatements:
+  - Effect: Allow
+    Action:
+    - KMS:Decrypt
+    Resource: "arn:aws:kms:eu-west-1:::blablabla-your-key-ARN-here"
+
+functions:
+  hello:
+    handler: handler.hello
+    environment:
+      FIAT_CURRENCY: EUR
+      BTC_ORDER: 10
+      ETH_ORDER: 6
+
+    events:
+      - schedule: rate(1 day)

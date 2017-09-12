@@ -1,0 +1,23 @@
+{
+  "name": "cryptolambda",
+  "version": "1.0.0",
+  "description": "Periodically buy cryptocurrencies (Dollar Cost Average)",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "cryptocurrency",
+    "bitcoin",
+    "ethereum",
+    "dollar-cost-average"
+  ],
+  "author": "Simone Scarduzio",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bitstamp": "^1.0.3"
+  },
+  "devDependencies": {
+    "serverless": "^1.20.2",
+    "serverless-kms-secrets": "^0.9.7"
+  }
+}
